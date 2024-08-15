@@ -5,7 +5,7 @@ export default function About() {
   const renderSection = (title, content) => (
     <div className="w-80 p-4 bg-light rounded mt-5 shadow">
       <h1 className="text-center mb-3 font-roboto fw-bold">{title}</h1>
-      <p className="text-center mb-3 p-3 font-roboto">{content}</p>
+      <li className="text-center mb-3 p-3 font-roboto list-unstyled">{content}</li>
     </div>
   );
 

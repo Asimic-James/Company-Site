@@ -84,6 +84,7 @@ export default function ContactUs() {
         {key: 'JI', value: 'Jigawa'},
         {key: 'KD', value: 'Kaduna'},
         {key: 'KT', value: 'Kano'},
+        {key: 'KN', value: 'Katsina'},
         {key: 'KE', value: 'Kebbi'},
         {key: 'KO', value: 'Kogi'},
         {key: 'KW', value: 'Kwara'},

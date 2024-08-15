@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <div>
         <PageBanner title="Services" />
-        <div className="container mt-5 mb-5 text-center w-80 p-5 bg-light rounded">
+        <div className="container mt-5 mb-5 text-center w-80 p-5 bg-light rounded shadow">
             <h1 className="text-center mb-5 font-roboto fw-bold">All Your Laptop Needs</h1>
             <ul className="row row-cols-1 row-cols-md-3 list-unstyled">
                 {assets.map(({id, label, src, content}) => (
