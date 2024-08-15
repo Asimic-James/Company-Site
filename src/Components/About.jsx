@@ -38,7 +38,7 @@ export default function About() {
         )}
         {renderSection(
           "Objectives",
-          <ul className="text-center mb-3 p-3 font-roboto list-unstyled">
+          <ul className="text-center mb-2 p-2 font-roboto list-unstyled">
             {renderObjectives(
               "Client Satisfaction",
               "To consistently exceed client expectations by delivering high-quality, reliable IT solutions that meet their unique needs."

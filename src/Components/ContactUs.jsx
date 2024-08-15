@@ -55,7 +55,6 @@ export default function ContactUs() {
         if (!zip.trim()) errors.push('Please enter your zip code');
         if (!password.trim()) errors.push('Please enter your password');
         if (!confirmPassword.trim()) errors.push('Please confirm your password');
-        // if (!gridCheck) errors.push('Please agree to the terms and conditions');
 
         if (errors.length) {
             alert(errors.join('\n'));
@@ -113,7 +112,6 @@ export default function ContactUs() {
         { label: 'Zip Code', id: 'zip', name: 'zip', type: 'text', placeholder: 'Enter your zip code', required: true },
         { label: 'Password', id: 'password', name: 'password', type: 'password', placeholder: 'Enter your password', required: true },
         { label: 'Confirm Password', id: 'confirmPassword', name: 'confirmPassword', type: 'password', placeholder: 'Confirm your password', required: true },
-        // { label: 'I agree to the terms and conditions', id: 'gridCheck', name: 'gridCheck', type: 'checkbox', required: true },
     ];
 
     return (
