@@ -9,7 +9,8 @@ export default function Services() {
     <div>
         <PageBanner title="Services" />
         <div className="container mt-5 mb-5 text-center w-80 p-5 bg-light rounded shadow">
-            <h1 className="text-center mb-5 font-roboto fw-bold">All Your Laptop Needs</h1>
+            <h1 className="text-center mb-4 font-roboto fw-bold">All Your Laptop Needs</h1>
+            <hr className='w-50 mx-auto' />
             <ul className="row row-cols-1 row-cols-md-3 list-unstyled">
                 {assets.map(({id, label, src, content}) => (
                     <li className="col col-md-4 font-roboto" key={id}>
