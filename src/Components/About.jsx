@@ -1,9 +1,9 @@
 import React from 'react'
 import PageBanner from './PageBanner'
 
-const About = () => {
+export default function About() {
   const renderSection = (title, content) => (
-    <div className="w-80 p-5 bg-light rounded mt-5">
+    <div className="w-80 p-4 bg-light rounded mt-5 shadow">
       <h1 className="text-center mb-3 font-roboto fw-bold">{title}</h1>
       <p className="text-center mb-3 p-3 font-roboto">{content}</p>
     </div>
@@ -18,6 +18,7 @@ const About = () => {
   return (
     <div>
       <PageBanner title="About Us" />
+
       <div className="container mt-5 mb-5 text-center fs-4 ">
         {renderSection(
           "Who We Are",
@@ -60,6 +61,3 @@ const About = () => {
     </div>
   );
 }
-  
-
-export default About
