@@ -14,7 +14,6 @@ export default function ContactUs() {
         zip: '',
         password: '',
         confirmPassword: '',
-        gridCheck: false,
     });
 
     useEffect(() => {
