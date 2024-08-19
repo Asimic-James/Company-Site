@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PageBanner from './PageBanner'
 
-const Home = () => {
+export default function Home() {
+
+  const [advice, setAdvice] = useState('')
+  const [count, setCount] = useState(0)
+
+  async function getAdvice() {
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const data = await res.json()
+    setAdvice(data.slip.advice);
+    setCount(count + 1);
+  }
+
+  useEffect(() => {
+    getAdvice()
+  }, []);
+
+
   return (
     <div>
         <PageBanner title="Home" />
+        <div className="container mt-5 mb-5 text-center w-80 p-5 bg-light rounded shadow">
+          <h1 className="text-center mb-4 font-roboto fw-bold">While you're here, let's brighten up your day!</h1>
+          <h2>{advice}</h2>
+          <button className="btn btn-primary mt-3" onClick={getAdvice}>Get Advice</button>
+          <h3 className="text-center mt-3">Advice Count: {count}</h3>
+        </div>
     </div>
   )
 }
-
-export default Home
