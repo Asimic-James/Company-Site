@@ -2,7 +2,6 @@ import React from 'react'
 import { assets } from '../assets/assets'
 import PageBanner from './PageBanner';
 
-
 export default function Services() {
 
   return (

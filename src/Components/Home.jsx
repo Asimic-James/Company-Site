@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
-    }, 1000);
+    }, 2000);
 
     getAdvice()
 
