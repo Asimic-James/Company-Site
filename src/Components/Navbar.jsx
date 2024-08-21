@@ -32,7 +32,9 @@ export default function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 font-roboto fw-bold fs-5">
             {menuOptions.map(({ label, path, icon }) => (
               <li key={label} className="nav-item">
-                <Link to={path} className={`nav-link ${window.location.pathname === path ? 'active' : ''} ${icon}`} onClick={()=>{setActiveLink(path)}}><span> {label}</span></Link>
+                <Link to={path} className={`nav-link ${window.location.pathname === path ? 'active' : ''} ${icon}`} onClick={()=>{setActiveLink(path);
+                  console.log(activeLink);
+                }}><span> {label}</span></Link>
               </li>
             ))}
           </ul>
