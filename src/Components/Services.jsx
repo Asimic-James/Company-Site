@@ -26,3 +26,35 @@ export default function Services() {
   );
 };
 
+
+
+//export default function Services() {
+// const [laptops, setLaptops] = useState([])
+
+
+// async function LaptopList() {
+//     const res = await fetch('https://api.example.com/laptops')
+//     const data = await res.json()
+//     setLaptops(data);
+//     return data
+//}
+// useEffect(() => {
+//     LaptopList()
+// }, [])
+//     
+//}
+//
+// class LaptopList(Resource):  
+//}
+
+// const laptops = [
+//     {'id': 1, 'brand': 'Dell', 'model': 'Inspiron'},
+//     {'id': 2, 'brand': 'Apple', 'model': 'MacBook Pro'},
+// ]
+
+  
+
+// api.add_resource(LaptopList, '/laptops')
+
+// if __name__ == '__main__':
+//     app.run(debug=True)
