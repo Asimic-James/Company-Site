@@ -14,7 +14,7 @@ export default function Profile() {
     funfact: 'A deep lover of Cat and Dog, they are my best lone buddies.'
   };
 
-  const { name, age, gender, location, info, funfact, occupation } = person;
+  const { name } = person;
 
   return (
     <div>

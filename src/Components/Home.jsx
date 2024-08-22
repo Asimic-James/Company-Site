@@ -10,7 +10,7 @@ export default function Home() {
   async function getAdvice() {
     const res = await fetch('https://api.adviceslip.com/advice');
     const data = await res.json()
-    setAdvice(data.slip.advice);
+    setAdvice(data.slip?.advice ?? 'No Advice Found');
     setCount(count + 1);
   }
 
@@ -32,7 +32,7 @@ export default function Home() {
     <div>
         <PageBanner title="Home" />
         <div className="container mt-5 mb-5 text-center w-80 p-5 bg-light rounded shadow">
-          <h1 className="text-center mb-4 font-roboto fw-bold">{time}</h1>
+          <h1 className="text-center mb-4 font-roboto fw-bold">⌚{time}</h1>
           <h1 className="text-center mb-4 font-roboto fw-bold">While you're here, let's brighten up your day!</h1>
           <h2>{advice}</h2>
           <button className="btn btn-primary mt-3" onClick={getAdvice}>Get Advice</button>
