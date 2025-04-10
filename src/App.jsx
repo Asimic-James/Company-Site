@@ -1,29 +1,39 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import About from "./Components/About";
 import Navbar from "./Components/Navbar";
-import Profile from "./Components/Profile";
 import Footer from "./Components/Footer";
-import ContactUs from "./Components/ContactUs";
-import Services from "./Components/Services";
+
+// Lazy load components for code splitting
+const Home = lazy(() => import("./Components/Home"));
+const About = lazy(() => import("./Components/About"));
+const Profile = lazy(() => import("./Components/Profile"));
+const Services = lazy(() => import("./Components/Services"));
+const ContactUs = lazy(() => import("./Components/ContactUs"));
+
 export default function App() {
   return (
-    <div>
+    <>
       <Router>
-        <Navbar />
-        <div className="pt-5 mt-5">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<ContactUs />} />
-          </Routes>
-        </div>
-        <hr className="mt-2 pt-2 bg-dark"/>
-        <Footer />
-      </Router> 
-    </div>
+        <header>
+          <Navbar />
+        </header>
+        <main className="pt-5 mt-5">
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<div>404 - Page Not Found</div>} />
+            </Routes>
+          </Suspense>
+        </main>
+        <hr className="mt-2 pt-2 bg-dark" />
+        <footer>
+          <Footer />
+        </footer>
+      </Router>
+    </>
   );
 }
