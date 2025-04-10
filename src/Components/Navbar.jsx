@@ -34,7 +34,8 @@ export default function Navbar() {
               <li key={label} className="nav-item">
                 <Link to={path} className={`nav-link ${window.location.pathname === path ? 'active' : ''} ${icon}`} onClick={()=>{setActiveLink(path);
                   console.log(activeLink);
-                }}><span> {label}</span></Link>
+                  }}><span> {label} </span>
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,5 +1,4 @@
 import React from 'react'
-
 const PageBanner = ({ title }) => {
   return (
     <div className="page-banner bg-dark d-flex justify-content-center align-items-center p-3 ">

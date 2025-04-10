@@ -23,7 +23,7 @@ export default function App() {
         </div>
         <hr className="mt-2 pt-2 bg-dark"/>
         <Footer />
-    </Router> 
+      </Router> 
     </div>
   );
 }

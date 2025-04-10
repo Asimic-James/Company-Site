@@ -1,7 +1,6 @@
 import React from 'react';
 import userIcon from '../assets/ASIMIC.png';
 import PageBanner from './PageBanner';
-
 export default function Profile() {
 
   const person = {
@@ -10,6 +9,7 @@ export default function Profile() {
     gender: 'Female',
     location: 'London',
     occupation: 'Software Engineer',
+    origin: 'British Columbia, Canada',
     info: 'An English mathematician and writer',
     funfact: 'A deep lover of Cat and Dog, they are my best lone buddies.'
   };

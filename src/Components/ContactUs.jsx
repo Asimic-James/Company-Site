@@ -147,6 +147,7 @@ export default function ContactUs() {
                   <div className="blockquote-footer">Someone famous in <cite title="Asimic Technologies">- Ralph Waldo Emerson</cite></div>
                 </blockquote>
             </div>
+            
         </div>
         </>
     );
